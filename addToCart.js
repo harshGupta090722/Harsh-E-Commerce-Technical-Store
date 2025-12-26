@@ -1,11 +1,11 @@
-import { getCartProductFromLocalLS } from "./getCartProducts";
+import { getCartProductFromLS } from "./getCartProducts";
 import { updateCartValue } from "./updateCartValue";
 
 
-getCartProductFromLocalLS();
+getCartProductFromLS();
 
 export const addToCart=(event,id,stock)=>{
-    let arrLocalStorageProduct=getCartProductFromLocalLS();
+    let arrLocalStorageProduct=getCartProductFromLS();
     
     const currentProdElem=document.querySelector(`#card${id}`);
     let quantity=currentProdElem.querySelector(".productQuantity").innerText;
@@ -16,7 +16,7 @@ export const addToCart=(event,id,stock)=>{
     
     let existingProduct=arrLocalStorageProduct.find((currProd)=>currProd.id === id);
     
-    if(existingProduct && quantity>1){
+    if(existingProduct){
         quantity=Number(existingProduct.quantity) + Number(quantity);
         price=Number(price*quantity);
         
@@ -27,7 +27,6 @@ export const addToCart=(event,id,stock)=>{
         });
         
         localStorage.setItem("cartProductLS",JSON.stringify(updatedCart));
-        alert("Selected already in the cart element !");
     }
     
     if(existingProduct){
