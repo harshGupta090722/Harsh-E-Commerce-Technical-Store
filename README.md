@@ -8,6 +8,26 @@ The project focuses on core frontend concepts such as DOM manipulation, cart log
 
 ---
 
+
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+<img src="screenshots/home.png" width="700"/>
+
+### 🛍️ Products Page
+<img src="screenshots/products.png" width="700"/>
+
+### 🛒 Cart Page
+<img src="screenshots/cart.png" width="700"/>
+
+### 📩 Contact Page
+<img src="screenshots/contact.png" width="700"/>
+
+---
+
 ## ✨ Features
 
 - 🏠 Multiple pages: **Home, About, Products, Contact**
