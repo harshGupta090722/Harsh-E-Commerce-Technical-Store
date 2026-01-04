@@ -4,7 +4,7 @@ Harsh Technical Store is a **basic E-commerce website** built using **HTML, CSS,
 The project focuses on core frontend concepts such as DOM manipulation, cart logic, local storage usage, and multi-page navigation without using any frameworks.
 
 🚀 **Live Demo:**  
-👉 https://harsh-e-commerce-technical-store.vercel.app
+👉 https://harsh-e-commerce-technical-store-m5.vercel.app
 
 ---
 
