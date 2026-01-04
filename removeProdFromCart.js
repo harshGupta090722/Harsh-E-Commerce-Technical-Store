@@ -1,5 +1,6 @@
 import { getCartProductFromLS } from "./getCartProducts";
 import { showToast } from "./showToast";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 import { updateCartValue } from "./updateCartValue";
 
 
@@ -19,4 +20,5 @@ export const removeProdFromCart=(id)=>{
     }
     
     updateCartValue(cartProducts);
+    updateCartProductTotal();
 };

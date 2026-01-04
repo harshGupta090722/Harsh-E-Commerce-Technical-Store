@@ -11,7 +11,7 @@ export const homeQuantityToggle=(event,id,stock)=>{
         if(quantity<stock){
             quantity+=1;
         }else if(quantity===stock){
-            quantity=stock;
+            alert("Can't order more than stock available !!");
         }
     }
     
@@ -20,7 +20,7 @@ export const homeQuantityToggle=(event,id,stock)=>{
             quantity-=1;
         }
     }
-
+    
     productQuantity.innerText=quantity;
     productQuantity.setAttribute("data-quantity", quantity.toString());
     console.log(quantity);

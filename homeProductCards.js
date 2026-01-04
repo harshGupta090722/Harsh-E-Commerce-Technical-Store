@@ -16,7 +16,7 @@ export const showProductContainer=(products)=>{
         const productClone=document.importNode(productTemplate.content,true);
         
         productClone.querySelector('#cardValue').setAttribute('id',`card${id}`);
-
+        
         productClone.querySelector('.productName').textContent=name;
         productClone.querySelector('.productImage').src=image;
         productClone.querySelector('.productImage').alt=name;
@@ -35,11 +35,9 @@ export const showProductContainer=(products)=>{
         productClone
         .querySelector('.add-to-cart-button')
         .addEventListener(('click'),(event)=>{
-          addToCart(event,id,stock);
+            addToCart(event,id,stock);
         })
-
-
-
+        
         productContainer.append(productClone);
     })
 };

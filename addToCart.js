@@ -19,7 +19,7 @@ export const addToCart=(event,id,stock)=>{
     
     if(existingProduct){
         quantity=Number(existingProduct.quantity) + Number(quantity);
-        price=Number(price*quantity);
+        price=Number(price*quantity).toFixed(2);
         
         let updatedCart={id,quantity,price};
         
@@ -33,10 +33,11 @@ export const addToCart=(event,id,stock)=>{
     }
     
     if(existingProduct){
+        alert("Product was already there in cart but we still added more quantities");
         return false;
     }
     
-    price=Number(price*quantity);
+    price=Number(price*quantity).toFixed(2);
     quantity=Number(quantity);
     
     

@@ -12,7 +12,6 @@ export function showToast(operation,id){
     
     document.body.appendChild(toast);
     
-    
     setTimeout(()=>{
         toast.remove();
     },2000);

@@ -6,17 +6,15 @@ export const updateCartProductTotal=()=>{
     
     let productSubTotal=document.querySelector(".productSubTotal");
     let productFinalTotal=document.querySelector(".productFinalTotal");
-
-    console.log(cartProducts);
     
     const totalCartValue=cartProducts.reduce((acc,curElem)=>{
         let productPrice=parseInt(curElem.price)||0;
         return acc + productPrice;
     },0);
     
-    console.log("Harsh "+totalCartValue);
-
-
     productSubTotal.innerText=`₹${totalCartValue}`;
-    productFinalTotal.innerText=`₹${totalCartValue+50}`;
+    if(cartProducts.length!==0)
+        productFinalTotal.innerText=`₹${totalCartValue+50}`;
+    else
+        productFinalTotal.innerText=`₹${0.00}`
 };
